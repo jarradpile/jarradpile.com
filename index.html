@@ -3,57 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Local Potato</title>
+    <title>Potato Time</title>
     <style>
         body {
             margin: 0;
+            padding: 0;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
-            background-color: #1a1a1a; /* Sleek dark mode */
-            font-family: sans-serif;
-            overflow: hidden;
+            background-color: #2c3e50;
+            font-family: 'Arial Black', Gadget, sans-serif;
+            color: white;
+            text-align: center;
         }
 
-        .potato-wrapper {
+        .container {
             display: flex;
             flex-direction: column;
             align-items: center;
         }
 
-        .spinning-potato {
-            width: 250px; 
+        .potato-image {
+            max-width: 400px; /* Adjust this to make your potato bigger or smaller */
             height: auto;
-            /* This links the animation defined below */
-            animation: rotate-potato 5s linear infinite;
-            cursor: pointer;
-            transition: filter 0.3s;
+            border-radius: 15px; /* Optional: rounds the corners slightly */
         }
 
-        /* Speed up on hover */
-        .spinning-potato:hover {
-            animation-duration: 1s;
-            filter: brightness(1.2);
-        }
-
-        @keyframes rotate-potato {
-            from { transform: rotate(0deg); }
-            to { transform: rotate(360deg); }
-        }
-
-        h2 {
-            color: #f1c40f;
+        h1 {
+            font-size: 3rem;
             margin-top: 20px;
-            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
         }
     </style>
 </head>
 <body>
 
-    <div class="potato-wrapper">
-        <img src="potato.gif" alt="My Local Potato" class="spinning-potato">
-        <h2>Local Potato detected</h2>
+    <div class="container">
+        <img src="potato.gif" alt="The Potato" class="potato-image">
+        <h1>IT'S POTATO TIME</h1>
     </div>
 
 </body>
