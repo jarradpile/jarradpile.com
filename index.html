@@ -13,34 +13,60 @@
                 Jarrad Pile <small>Home</small>
             </a>
             <nav class="nav" aria-label="Primary">
-                <a href="/contact.html">Contact</a>
+                <a href="#contact">Contact</a>
             </nav>
         </div>
     </header>
 
-    <main class="hero">
-        <div class="left-spacer" aria-hidden="true"></div>
-        <section class="content">
-            <div class="card">
-                <p class="kicker">Welcome</p>
-                <h1>Hi, I’m Jarrad.</h1>
-                <p class="lead">
-                    This is my personal site. Use the links above to view my resume or get in touch.
-                </p>
-                <div class="actions">
-                    <a class="btn btn-primary btn-hero-primary" href="/contact.html">Contact</a>
-                    <a class="btn btn-secondary" href="/resume.html">View resume</a>
+    <main>
+        <section class="hero">
+            <div class="left-spacer" aria-hidden="true"></div>
+            <section class="content">
+                <div class="card">
+                    <p class="kicker">Welcome</p>
+                    <h1>Hi, I’m Jarrad.</h1>
+                    <p class="lead">
+                        This is my personal site. Use the links above to view my resume or get in touch.
+                    </p>
+                    <div class="actions">
+                        <a class="btn btn-primary btn-hero-primary" href="#contact">Contact</a>
+                        <a class="btn btn-secondary" href="/resume.html">View resume</a>
+                    </div>
+                    <p class="muted" style="margin-top: 18px;">
+                        For fun: <a href="/potato/">It’s Potato Time</a>.
+                    </p>
                 </div>
-                <p class="muted" style="margin-top: 18px;">
-                    For fun: <a href="/potato/">It’s Potato Time</a>.
-                </p>
+            </section>
+        </section>
+
+        <section id="contact" class="page">
+            <div class="container">
+                <h2>Contact</h2>
+                <div class="panel">
+                    <h3>Email</h3>
+                    <p>
+                        <a class="btn btn-secondary" href="mailto:your@email.com">
+                            your@email.com
+                        </a>
+                    </p>
+
+                    <h3>Links</h3>
+                    <ul class="list">
+                        <li><a href="#" rel="noopener">LinkedIn</a></li>
+                        <li><a href="#" rel="noopener">GitHub</a></li>
+                        <li><a href="#" rel="noopener">Portfolio / Projects</a></li>
+                    </ul>
+                    <p class="muted" style="margin-top: 16px; font-size: 0.85rem;">
+                        Still want something silly? Visit <a href="/potato/">It’s Potato Time</a>.
+                    </p>
+                </div>
             </div>
         </section>
     </main>
 
     <footer>
         <div class="container">
-            <div>© <span id="year"></span> Jarrad Pile · <a href="/contact.html">Contact</a></div>
+            <div>© <span id="year"></span> Jarrad Pile · <a href="#contact">Contact</a></div>
         </div>
     </footer>
 
