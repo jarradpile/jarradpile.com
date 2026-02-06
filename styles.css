@@ -139,7 +139,7 @@ h1 {
   border: 2px solid transparent;
 }
 .btn-primary {
-  background: var(--text);
+  background: var(--accent);
   color: #FFFFFF;
 }
 .btn-primary:hover {
