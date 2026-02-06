@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Resume | Jarrad Pile</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container inner">
+      <a class="brand" href="/">
+        Jarrad Pile <small>Resume</small>
+      </a>
+      <nav class="nav" aria-label="Primary">
+        <a href="/">Home</a>
+        <a href="/resume.html" aria-current="page">Resume</a>
+        <a href="/contact.html">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="page">
+    <div class="container">
+      <h2>Resume</h2>
+      <p class="muted">Replace the placeholders below with your real details.</p>
+
+      <div class="panel">
+        <h3>Summary</h3>
+        <p>
+          Short 2–3 sentence summary of who you are, what you do, and what you're looking for.
+        </p>
+
+        <h3>Experience</h3>
+        <p><strong>Role Title</strong> — Company <span class="muted">(YYYY–YYYY)</span></p>
+        <ul class="list">
+          <li>Impact bullet: what you shipped, improved, or owned.</li>
+          <li>Metrics bullet: performance, revenue, reliability, or speed.</li>
+          <li>Collaboration bullet: teams, stakeholders, leadership.</li>
+        </ul>
+
+        <h3>Skills</h3>
+        <ul class="list">
+          <li>Skill area 1 (e.g. Frontend: HTML/CSS/JS)</li>
+          <li>Skill area 2 (e.g. Tools: Git, CI/CD)</li>
+          <li>Skill area 3 (e.g. Platforms: Cloud, Linux)</li>
+        </ul>
+
+        <h3>Education</h3>
+        <p><strong>Qualification</strong> — School <span class="muted">(YYYY)</span></p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>© <span id="year"></span> Jarrad Pile · <a href="/contact.html">Contact</a></div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

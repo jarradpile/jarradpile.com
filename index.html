@@ -3,30 +3,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>jarradpile.com</title>
-    <style>
-        body {
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            background-color: black;
-            font-family: sans-serif;
-            color: white;
-            text-align: center;
-        }
-        a {
-            color: gold;
-            font-size: 1.5rem;
-        }
-        a:hover {
-            text-decoration: underline;
-        }
-    </style>
+    <title>Jarrad Pile</title>
+    <link rel="stylesheet" href="/styles.css">
 </head>
 <body>
-    <p><a href="/potato/">It's Potato Time →</a></p>
+    <header class="site-header">
+        <div class="container inner">
+            <a class="brand" href="/">
+                Jarrad Pile <small>Home</small>
+            </a>
+            <nav class="nav" aria-label="Primary">
+                <a href="/" aria-current="page">Home</a>
+                <a href="/resume.html">Resume</a>
+                <a href="/contact.html">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="hero">
+        <div class="left-spacer" aria-hidden="true"></div>
+        <section class="content">
+            <div class="card">
+                <p class="kicker">Welcome</p>
+                <h1>Hi, I’m Jarrad.</h1>
+                <p class="lead">
+                    This is my personal site. Use the links above to view my resume or get in touch.
+                </p>
+                <div class="actions">
+                    <a class="btn btn-primary" href="/contact.html">Contact</a>
+                    <a class="btn btn-secondary" href="/resume.html">View resume</a>
+                </div>
+                <p class="muted" style="margin-top: 18px;">
+                    For fun: <a href="/potato/">It’s Potato Time</a>.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div>© <span id="year"></span> Jarrad Pile · <a href="/contact.html">Contact</a></div>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
 </body>
 </html>

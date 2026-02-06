@@ -1,0 +1,212 @@
+:root {
+:  --bg: #FFFFFF;            /* Soft White */
+:  --text: #333331;          /* Dark Charcoal */
+:  --muted: #A3B5C7;         /* Muted Blue-Gray */
+:  --highlight: #6AB2E2;     /* Ocean Teal */
+:  --nav: #0F2C4A;           /* Deep Navy */
+:  --accent: #D10A88;        /* Warm Terracotta (as provided) */
+:  --max: 1100px;
+:}
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+.container {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Header / Nav */
+.site-header {
+  background: var(--nav);
+  color: var(--bg);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+.site-header .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 64px;
+  gap: 16px;
+}
+.brand {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 10px;
+  text-decoration: none;
+  color: var(--bg);
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+.brand small {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.75);
+  letter-spacing: 0;
+}
+.nav {
+  display: flex;
+  gap: 18px;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+}
+.nav a {
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  font-weight: 700;
+  padding: 10px 10px;
+  border-radius: 10px;
+}
+.nav a:hover {
+  background: rgba(163, 181, 199, 0.18);
+  color: #FFFFFF;
+}
+.nav a[aria-current="page"] {
+  background: rgba(106, 178, 226, 0.22);
+  color: #FFFFFF;
+}
+
+/* Home hero */
+.hero {
+  min-height: calc(100vh - 64px);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: stretch;
+  background:
+    linear-gradient(90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0.15) 40%,
+      rgba(255, 255, 255, 0.92) 62%,
+      rgba(255, 255, 255, 1) 75%),
+    url("Jarrad Pile.jpg");
+  background-size: cover;
+  background-position: left center;
+  background-repeat: no-repeat;
+}
+.hero .left-spacer {
+  /* empty column to keep content right aligned */
+}
+.hero .content {
+  padding: 56px 20px;
+  display: flex;
+  align-items: center;
+}
+.hero .content .card {
+  width: min(520px, 100%);
+  margin-left: auto;
+}
+.kicker {
+  display: inline-block;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--nav);
+  margin: 0 0 12px;
+}
+h1 {
+  font-size: clamp(2.2rem, 4vw, 3.1rem);
+  line-height: 1.1;
+  margin: 0 0 14px;
+  color: var(--nav);
+}
+.lead {
+  margin: 0 0 20px;
+  font-size: 1.05rem;
+  color: rgba(51, 51, 49, 0.9);
+}
+.actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 16px;
+  border-radius: 12px;
+  text-decoration: none;
+  font-weight: 800;
+  border: 2px solid transparent;
+}
+.btn-primary {
+  background: var(--accent);
+  color: #FFFFFF;
+}
+.btn-primary:hover {
+  filter: brightness(1.05);
+}
+.btn-secondary {
+  background: transparent;
+  border-color: rgba(15, 44, 74, 0.25);
+  color: var(--nav);
+}
+.btn-secondary:hover {
+  border-color: rgba(15, 44, 74, 0.5);
+  background: rgba(106, 178, 226, 0.12);
+}
+
+/* Generic page layout */
+.page {
+  padding: 42px 0 64px;
+}
+.page h2 {
+  margin: 0 0 14px;
+  color: var(--nav);
+  font-size: 1.6rem;
+}
+.page h3 {
+  margin: 22px 0 8px;
+  color: var(--nav);
+}
+.muted {
+  color: rgba(51, 51, 49, 0.72);
+}
+.panel {
+  border: 1px solid rgba(15, 44, 74, 0.14);
+  border-radius: 16px;
+  padding: 18px 18px;
+  background: #FFFFFF;
+}
+.list {
+  margin: 10px 0 0;
+  padding-left: 18px;
+}
+.list li { margin: 6px 0; }
+
+footer {
+  background: var(--text);
+  color: rgba(255, 255, 255, 0.9);
+  padding: 22px 0;
+}
+footer a {
+  color: var(--highlight);
+  text-decoration: none;
+  font-weight: 800;
+}
+footer a:hover { text-decoration: underline; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .hero {
+    grid-template-columns: 1fr;
+    background:
+      linear-gradient(180deg,
+        rgba(255, 255, 255, 0.25) 0%,
+        rgba(255, 255, 255, 0.92) 55%,
+        rgba(255, 255, 255, 1) 75%),
+      url("Jarrad Pile.jpg");
+    background-position: center top;
+  }
+  .hero .content { padding: 46px 20px; }
+  .hero .content .card { margin: 0 auto; }
+}
