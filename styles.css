@@ -128,6 +128,13 @@ h1 {
   gap: 12px;
   flex-wrap: wrap;
 }
+.btn-hero-primary {
+  background: var(--text);
+  color: #FFFFFF;
+}
+.btn-hero-primary:hover {
+  filter: brightness(1.08);
+}
 .btn {
   display: inline-flex;
   align-items: center;
