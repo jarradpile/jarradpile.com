@@ -89,7 +89,7 @@ body {
       rgba(255, 255, 255, 1) 66%),
     url("Jarrad Pile.jpg");
   background-size: cover;
-  background-position: calc(0% - 160px) center;
+  background-position: calc(0% - 160px) top;
   background-repeat: no-repeat;
 }
 .hero .left-spacer {
