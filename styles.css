@@ -8,14 +8,26 @@
 :  --max: 1100px;
 :}
 * { box-sizing: border-box; }
-html, body { height: 100%; }
+html {
+  height: 100%;
+  scroll-behavior: smooth;
+}
 body {
   margin: 0;
+  height: 100%;
   font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
   background: var(--bg);
   color: var(--text);
   line-height: 1.5;
 }
+
+/* Focus styles for accessibility */
+a:focus-visible,
+.btn:focus-visible {
+  outline: 2px solid var(--highlight);
+  outline-offset: 3px;
+}
+.brand:focus-visible { outline-offset: 4px; }
 
 .container {
   max-width: var(--max);
@@ -65,11 +77,14 @@ body {
   font-weight: 700;
   padding: 10px 10px;
   border-radius: 10px;
+  transition: background 0.2s ease, color 0.2s ease;
 }
 .nav a:hover {
   background: rgba(163, 181, 199, 0.18);
   color: #FFFFFF;
 }
+.brand:hover { color: #FFFFFF; }
+.brand { transition: color 0.2s ease; }
 .nav a[aria-current="page"] {
   background: rgba(106, 178, 226, 0.22);
   color: #FFFFFF;
@@ -103,6 +118,11 @@ body {
 .hero .content .card {
   width: min(520px, 100%);
   margin-left: auto;
+  padding: 28px 24px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(15, 44, 74, 0.08);
 }
 .kicker {
   display: inline-block;
@@ -139,11 +159,12 @@ h1 {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 12px 16px;
+  padding: 12px 20px;
   border-radius: 12px;
   text-decoration: none;
   font-weight: 800;
   border: 2px solid transparent;
+  transition: filter 0.2s ease, background 0.2s ease, border-color 0.2s ease;
 }
 .btn-primary {
   background: var(--accent);
@@ -166,6 +187,11 @@ h1 {
 .page {
   padding: 42px 0 64px;
 }
+#contact.page {
+  scroll-margin-top: 80px;
+  padding-top: 56px;
+  border-top: 1px solid rgba(15, 44, 74, 0.06);
+}
 .page h2 {
   margin: 0 0 14px;
   color: var(--nav);
@@ -181,8 +207,20 @@ h1 {
 .panel {
   border: 1px solid rgba(15, 44, 74, 0.14);
   border-radius: 16px;
-  padding: 18px 18px;
+  padding: 24px 24px;
   background: #FFFFFF;
+  box-shadow: 0 2px 12px rgba(15, 44, 74, 0.04);
+}
+.panel a:not(.btn) {
+  color: var(--highlight);
+  text-decoration: none;
+  font-weight: 700;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+.panel a:not(.btn):hover {
+  border-bottom-color: var(--highlight);
+  color: var(--nav);
 }
 .list {
   margin: 10px 0 0;
